@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MIXES BREAD</title>
+	<link rel="stylesheet" type="text/css" href="buy.css">
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<script type="text/javascript" src="js/jquery-3.5.1.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+</head>
+<body>
+	<header>
+		<nav>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="#">Kinds of Bread</a></li>
+				<li><a href="#">Bread Quote</a></li>
+				<li><a href="buy.html"  style="border-bottom: 3px solid rgb(255,48,48);">Buy yours today</a></li>
+				<li><a href="#">About</a></li>
+			</ul>
+		</nav>
+	</header>
+	<center>
+		
+	<div id="form">
+		<h1>Buy your bread today</h1>
+		<h3>Fill this form to order yours</h3>
+		<form autocomplete="off">
+			<table>
+				<tr>
+					<td>First Name: </td>
+					<td><input type="text" name="fname" placeholder="  First Name..." size="40" required></td>
+				</tr>
+				<tr>
+					<td>Last Name: </td>
+					<td><input type="text" name="sname" placeholder="  Last Name..." size="40" required></td>
+				</tr>
+				<tr>
+					<td>Email: </td>
+					<td><input type="email" name="mail" placeholder="  Example@gmail.com" size="40" required></td>
+				</tr>
+				<tr>
+					<td>Phone Number: </td>
+					<td><input type="number" name="number" placeholder="  Phone Number..." size="40" required id="numb"></td>
+				</tr>
+				<tr>
+					<td>Select the type of bread you want:     </td>
+					<td><input list="bread" name="yt">
+						<datalist id="bread">
+						<option value="Butter Bread">
+						<option value="White Bread">
+						<option value="Wheat Bread">
+						<option value="Whole Wheat Bread">
+						<option value="Multi-Grain Bread">
+						<option value="Whole Grain Bread">
+						<option value="Spouted Grain Bread">
+						<option value="Sourdough Bread">
+						<option value="Rye Bread">
+						<option value="Pumpernickel Bread">
+					</datalist></td>
+				</tr>
+				<tr>
+					<td>How many: </td>
+					<td><input type="number" name="quantity" placeholder="  How many..."   required></td>
+				</tr>
+				<tr>
+					<td>When do you want it delivered?</td>
+					<td id="del">
+						<p> Immediately</p> <input type="radio" name="when" value="Now" class="rad"  id="dateh1">
+						<p> Set Date</p> <input type="radio" name="when" value="Select date" class="rad" id="dateh2">
+					</td>
+				</tr>
+				<tr id="datei">
+					<td>Set delivering date:</td>
+					<td><input type="date" name="date" size="40" value="date"></td>
+				</tr>
+				
+			</table>
+
+			<input type="submit" name="" id="sub" value="Order Now...">
+		</form>
+	</div>
+	</center>
+	
+
+
+
+
+
+
+
+
+
+
+
+	</body>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#dateh2").click(function(){
+				$("#datei").fadeIn("slow");
+			})
+			$("#dateh1").click(function(){
+				$("#datei").fadeOut("slow");
+			})
+			$("#numb").click(function(){
+				alert("Note: Your Number Will Just Be Only Used To Confirm Delivering")
+			})
+		})
+	</script>
+</html>

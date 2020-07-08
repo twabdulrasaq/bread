@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MIXES BREAD</title>
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<script type="text/javascript" src="js/jquery-3.5.1.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<script src="js/slideshow.js"></script>
+</head>
+<body>
+	<header>
+		<nav>
+			<ul>
+				<li><a href="index.html" style="border-bottom: 3px solid rgb(255,48,48);">Home</a></li>
+				<li><a href="#">Kinds of Bread</a></li>
+				<li><a href="#">Bread Quote</a></li>
+				<li><a href="buy.html">Buy yours today</a></li>
+				<li><a href="#">About</a></li>
+			</ul>
+		</nav>
+	</header>
+	<div id="main"></div>
+<h1 id="we">I AM A MAN</h1>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+    $(document).ready(function () {
+
+
+        
+
+        $("body").backgroundSlideshow({
+            onBeforeTransition: function (index) {
+                console.log("before transition", index)
+            },
+            onAfterTransition: function (index) {
+                console.log("after transition", index)
+            },
+            transitionDuration: 3000,
+            images: [
+                "images/7.jpg",
+                "images/2.jpg",
+                "images/3.jpg",
+                "images/4.jpg",
+                "images/5.jpg",
+                "images/6.jpg",
+                "images/1.jpg",
+                "images/8.jpg",
+                "images/9.jpg",
+                "images/10.jpg",
+                "images/11.jpg",
+                "images/12.jpg",
+                "images/13.jpg",
+                "images/14.jpg",
+            ]
+        })
+
+
+
+
+    })
+</script>
+
+
+
+</body>
+</html>
